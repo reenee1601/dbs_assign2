@@ -1,6 +1,9 @@
+
+import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import concat_ws, lit, from_json, col, explode, size, collect_list
-
+# don't change this line
+hdfs_nn = sys.argv[1]
 # Create a SparkSession
 spark = SparkSession.builder \
     .appName("Co-Cast Analysis") \

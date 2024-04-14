@@ -4,7 +4,8 @@ import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
-
+# don't change this line
+hdfs_nn = sys.argv[1]
 # Initialize Spark session
 spark = SparkSession.builder.appName("Assignment 2 Question 1").getOrCreate()
 

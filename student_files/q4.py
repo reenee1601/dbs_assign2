@@ -1,7 +1,8 @@
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import explode, count, split, regexp_replace
-
+# don't change this line
+hdfs_nn = sys.argv[1]
 input_path = f"hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/part1/input/TA_restaurants_curated_cleaned.csv"
 
 output_path = f"hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/output3/question4/"

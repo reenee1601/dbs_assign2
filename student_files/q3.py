@@ -1,7 +1,8 @@
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import avg, col, lit
-
+# don't change this line
+hdfs_nn = sys.argv[1]
 # Input and output path
 input_path = f"hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/part1/input/TA_restaurants_curated_cleaned.csv"
 

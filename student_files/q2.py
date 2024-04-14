@@ -4,7 +4,8 @@ from pyspark.sql.functions import col, max, min
 
 # you may add more import if you need to
 
-
+# don't change this line
+hdfs_nn = sys.argv[1]
 
 spark = SparkSession.builder.appName("Assigment 2 Question 2").getOrCreate()
 # YOUR CODE GOES BELOW
