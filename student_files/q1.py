@@ -10,8 +10,8 @@ hdfs_nn = sys.argv[1]
 spark = SparkSession.builder.appName("Assignment 2 Question 1").getOrCreate()
 
 # Input and output paths
-input_csv = f"hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/part1/input/TA_restaurants_curated_cleaned.csv"
-output_csv = f"hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/output3/question1/"
+input_csv = f"/student_files/data/TA_restaurants_curated_cleaned.csv"
+output_csv = f"/student_files/output/question1"
 
 # Get the input CSV file as a dataframe :
 
