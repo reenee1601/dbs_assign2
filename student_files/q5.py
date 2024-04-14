@@ -10,7 +10,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Load the Parquet file into a DataFrame
-df = spark.read.parquet("hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/part2/input/tmdb_5000_credits.parquet")
+df = spark.read.parquet("/student_files/data/tmdb_5000_credits.parquet")
 
 # Extract actor names from JSON in the `cast` column
 df_cast = df.withColumn("cast_list", explode(from_json(col("cast"), schema="array<struct<name:string>>"))) \
@@ -37,7 +37,7 @@ df_filtered = df_count.filter(col("count") >= 2)
 
 # Save the output as Parquet files with desired schema
 df_filtered.select("movie_id", "title", "actor1", "actor2").coalesce(1).write.parquet(
-    "hdfs://ip-172-31-94-60.ec2.internal:9000/assignment2/output3/question5/",
+    "/student_files/output/question5/",
     mode="overwrite"  # Overwrite existing output if any
 )
 
